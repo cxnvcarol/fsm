@@ -948,11 +948,12 @@ function saveAsPNG() {
   document.location.href = pngData;
 }
 function saveAsJSON() {
-  var backup = JSON.parse(localStorage['fsm']);
+  
   output(localStorage['fsm']);
 }
 function importJSON() {
-  //TODO
+  localStorage['fsm']=document.getElementById('output').value;
+  restoreBackup();
 
 }
 function saveAsSVG() {
